@@ -180,7 +180,6 @@ body {
   height: 100%;
   width: 100%;
   background-size: cover;  /*Ensures the image covers the entire element */
-  /* background-position: center; Centers the image */
 }
 
 .label-left {
@@ -235,7 +234,7 @@ body {
   height: 100%;
   width: 100%;
   /* filter: blur(5px); */
-  background: url("../static/images/sheepblood_ampli_inr.png") no-repeat;
+  background: url("../images/sheepblood_ampli_inr.png") no-repeat;
 }
 .img-5{
   /* position: absolute;
