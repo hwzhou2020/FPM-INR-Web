@@ -209,26 +209,26 @@ body {
 .wrapper .images .img-0{
   height: 100%;
   width: 100%;
-  background: url("/static/images/Siemens_BF_cut.png") no-repeat;
+  background: url("./static/images/Siemens_BF_cut.png") no-repeat;
 }
 .wrapper .images .img-1{
   /* height: 100%;
   width: 100%; */
-  background: url("/static/images/Siemens_FPM_cut.png") no-repeat;
+  background: url("./static/images/Siemens_FPM_cut.png") no-repeat;
 }
 .wrapper .images .img-2{
   /* position: absolute;
   height: 100%;
   width: 100%; */
   /* filter: blur(5px); */
-  background: url("/static/images/Siemens_INR_cut.png") no-repeat;
+  background: url("./static/images/Siemens_INR_cut.png") no-repeat;
 }
 .img-3{
   position: absolute;
   height: 100%;
   width: 100%;
   /* filter: blur(5px); */
-  background: url("/static/images/sheepblood_ampli_fpm.png") no-repeat;
+  background: url("./static/images/sheepblood_ampli_fpm.png") no-repeat;
 }
 .img-4{
   position: absolute;
