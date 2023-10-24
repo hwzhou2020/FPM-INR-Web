@@ -7,8 +7,7 @@
     Fourier ptychographic microscopy image stack reconstruction using implicit neural representations.">
   <meta name="keywords" content="FPM, INR, Fourier Ptychography, implicit neural representation, FPM-INR">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>FPM-INR: Fourier ptychographic microscopy image stack reconstruction using implicit neural representations</title></title>
+  <title>FPM-INR</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -28,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/style.css">
+  <!-- <link rel="stylesheet" href="./static/css/style.css"> -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -148,7 +147,7 @@
     <!-- Figrue 1. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Framework work flow</h2>
+        <h2 class="title is-3">Framework Workflow</h2>
 
           <div class="column is-centered has-text-centered">
             <img src="./static/images/Figure 1.jpg" alt="FPM-INR" class="publication-image">
@@ -191,7 +190,7 @@
 
       <!-- Paper video. -->
       <div class="columns is-centered has-text-justified">
-        <div class="column is-four-fifths">
+        <div class="column is-full-width">
           <h3 class="title is-4">Tilted Human Blood Smear Stack</h3>
           <div class="publication-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/cwfU89jiut0?si=Lvs1XeIgc9Ez8-vy" 
@@ -203,7 +202,7 @@
 
       <!-- Paper video. -->
       <div class="columns is-centered has-text-justified">
-        <div class="column is-four-fifths">
+        <div class="column is-full-width">
           <h3 class="title is-4">Thyroid Gland Lesion Stack</h3>
           <div class="publication-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/gjO9ClbiTIA?si=ziyxeguPVrdXJkx4" 
@@ -222,52 +221,9 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-      
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-       
-
-      </div>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">2D slice reconstruction</h2>
     </div>
-    <!--/ Animation. -->
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">2D slice reconstruction</h2>
 
     <!-- Siemens Star -->
     <h3 class="title is-4">Siemens Star</h3>
@@ -275,46 +231,155 @@
           <p>
             We can also reconstruct 2D slices us FPM-INR method.
             In this demonstration, a Siemens Star resolution target with synthetic NA of 0.75 using 10X/0.25NA objective is presented.
-            Use the image slide to see the comparsion among the brightfield microscope, FPM, and FPM-INR. Our method shows equivalent performance as the FPM and superior resolution enhancement to brightfield image. 
+            Use the image slide and click to drag to see the comparsion among the brightfield microscope, FPM, and FPM-INR. 
+            Our method shows equivalent performance as the FPM and superior resolution enhancement to brightfield image. 
           </p>
         </div>
-
-        <div class="image-comparison">
-          <div class="images-container">
-            <img class="before-image" src="./static/images/Siemens_BF_cut.png" alt="" />
-            <img class="after-image" src="./static/images/Siemens_INR_cut.png" alt="" />
-    
-            <div class="slider-line"></div>
-            <div class="slider-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-                />
-              </svg>
+        <p>
+          <br>
+        </p>
+      <div class="columns is-vcentered interpolation-panel">
+        <div class="columns is-2 has-text-centered">
+          <div class="wrapper first-slider"> 
+            <div class="label-left">FPM-INR</div>
+            <div class="label-right">Brightfield</div>       
+            <div class="images">
+              <div class="img-0"></div>
+              <div class="img-2"></div>
             </div>
-    
-            <input type="range" class="slider" min="0" max="100" />
+            <div class="slider">
+              <div class="drag-line">
+                <span></span>
+              </div>
+              <input type="range" min="0" max="100" value="50">
+            </div>
           </div>
-        </div>
-        <script src="./js/main.js"></script>
+        
+          <script>
+            const wrapper1 = document.querySelector(".first-slider");
+            const slider1 = wrapper1.querySelector(".slider input");
+            const img1 = wrapper1.querySelector(".images .img-2");
+            const dragLine1 = wrapper1.querySelector(".slider .drag-line");
+            slider1.oninput = ()=>{
+              let sliderVal = slider1.value;
+              dragLine1.style.left = sliderVal + "%";
+              img1.style.width = sliderVal + "%";
+            }
+          </script>
 
+          <div class="wrapper second-slider">  
+            <div class="label-left">FPM-INR</div>
+              <div class="label-right">FPM</div>       
+            <div class="images">
+              <div class="img-1"></div>
+              <div class="img-2"></div>
+            </div>
+            <div class="slider">
+              <div class="drag-line">
+                <span></span>
+              </div>
+              <input type="range" min="0" max="100" value="50">
+            </div>
+          </div>
+          
+        
+          <script>
+            const wrapper2 = document.querySelector(".second-slider");
+            const slider2 = wrapper2.querySelector(".slider input");
+            const img2 = wrapper2.querySelector(".images .img-2");
+            const dragLine2 = wrapper2.querySelector(".slider .drag-line");
+            slider2.oninput = ()=>{
+              let sliderVal = slider2.value;
+              dragLine2.style.left = sliderVal + "%";
+              img2.style.width = sliderVal + "%";
+            }
+          </script>
+        </div>
+      </div>
+      <!-- Siemens Star -->
+      
+    <p>
+      <br>
+      <br>
+    </p>
+
+    <!-- Sheepblood -->
+    <h3 class="title is-4">Sheep Blood Smear</h3>
+    <div class="content has-text-justified">
+      <p>
+        Here we demonstrate an comple-field reconstruction using FPM and FPM-INR.
+        The left image slider shows the amplitude comparison and the right shows the phase comparison.
+        Use the image slide and click to drag to see the comparsion between FPM and FPM-INR.  
+      </p>
+    </div>
+    <p>
+      <br>
+    </p>
+
+    <div class="columns is-2 has-text-centered">
+      <div class="wrapper third-slider"> 
+        <div class="label-left">FPM-INR</div>
+        <div class="label-right">FPM</div>       
+        <div class="images">
+          <div class="img-3"></div>
+          <div class="img-4"></div>
+        </div>
+        <div class="slider">
+          <div class="drag-line">
+            <span></span>
+          </div>
+          <input type="range" min="0" max="100" value="50">
+        </div>
+      </div>
+    
+      <script>
+        const wrapper3 = document.querySelector(".third-slider");
+        const slider3 = wrapper3.querySelector(".slider input");
+        const img3 = wrapper3.querySelector(".images .img-4"); // Change this to the image you want to show 
+        const dragLine3 = wrapper3.querySelector(".slider .drag-line");
+        slider3.oninput = ()=>{
+          let sliderVal = slider3.value;
+          dragLine3.style.left = sliderVal + "%";
+          img3.style.width = sliderVal + "%";
+        }
+      </script>
+
+      <div class="wrapper fourth-slider">  
+        <div class="label-left">FPM-INR</div>
+          <div class="label-right">FPM</div>       
+        <div class="images">
+          <div class="img-5"></div>
+          <div class="img-6"></div>
+        </div>
+        <div class="slider">
+          <div class="drag-line">
+            <span></span>
+          </div>
+          <input type="range" min="0" max="100" value="50">
+        </div>
+      </div>
+    
+      <script>
+        const wrapper4 = document.querySelector(".fourth-slider");
+        const slider4 = wrapper4.querySelector(".slider input");
+        const img4 = wrapper4.querySelector(".images .img-6"); // Change this to the image you want to show 
+        const dragLine4 = wrapper4.querySelector(".slider .drag-line");
+        slider4.oninput = ()=>{
+          let sliderVal = slider4.value;
+          dragLine4.style.left = sliderVal + "%";
+          img4.style.width = sliderVal + "%";
+        }
+      </script> 
+    </div>
+
+  <!-- Sheepblood -->
+      
   </div>
 </section>
 
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h3 class="title">BibTeX</h3>
     <pre><code>@article{Zhou2023fpminr,
   author    = { },
   title     = {FPM-INR: Fourier ptychographic microscopy image stack reconstruction using implicit neural representations},
@@ -322,8 +387,14 @@
   year      = {2023},
 }</code></pre>
   </div>
+  <div class="container is-max-desktop content">
+    <h3 class="title">Dataset DOI</h3>
+    <pre><code> 
+CaltechDATA
+DOI: 
+    </code></pre>
+  </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
@@ -338,8 +409,7 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
-          
+        <div class="content has-text-centered" style="font-size: 10px;">
           <p>
             This page uses the template: <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
           </p>
