@@ -7,10 +7,12 @@
     Fourier ptychographic microscopy image stack reconstruction using implicit neural representations.">
   <meta name="keywords" content="FPM, INR, Fourier Ptychography, implicit neural representation, FPM-INR">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>FPM-INR: Fourier ptychographic microscopy image stack reconstruction using implicit neural representations</title></title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -26,12 +28,15 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
+  <link rel="stylesheet" href="./static/css/style.css">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -140,11 +145,18 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Figrue 1. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Framework work flow</h2>
 
-    <div class="column is-3 has-text-centered">
-      <img src="./static/images/Figure 1.tif" alt="FPM-INR" class="publication-image">
+          <div class="column is-centered has-text-centered">
+            <img src="./static/images/Figure 1.jpg" alt="FPM-INR" class="publication-image">
+          </div>
+
+      </div>
     </div>
-
+    <!-- Figrue 1. -->
   </div>
 </section>
 
@@ -229,12 +241,7 @@
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
+      
           <div class="column interpolation-video-column">
             <div id="interpolation-image-wrapper">
               Loading...
@@ -243,12 +250,7 @@
                    id="interpolation-slider"
                    step="1" min="0" max="100" value="0" type="range">
           </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+
         </div>
         <br/>
         <!--/ Interpolating. -->
@@ -260,6 +262,54 @@
 
   </div>
 </section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">2D slice reconstruction</h2>
+
+    <!-- Siemens Star -->
+    <h3 class="title is-4">Siemens Star</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also reconstruct 2D slices us FPM-INR method.
+            In this demonstration, a Siemens Star resolution target with synthetic NA of 0.75 using 10X/0.25NA objective is presented.
+            Use the image slide to see the comparsion among the brightfield microscope, FPM, and FPM-INR. Our method shows equivalent performance as the FPM and superior resolution enhancement to brightfield image. 
+          </p>
+        </div>
+
+        <div class="image-comparison">
+          <div class="images-container">
+            <img class="before-image" src="./static/images/Siemens_BF_cut.png" alt="" />
+            <img class="after-image" src="./static/images/Siemens_INR_cut.png" alt="" />
+    
+            <div class="slider-line"></div>
+            <div class="slider-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                />
+              </svg>
+            </div>
+    
+            <input type="range" class="slider" min="0" max="100" />
+          </div>
+        </div>
+        <script src="./js/main.js"></script>
+
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
@@ -298,6 +348,7 @@
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>
