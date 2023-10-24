@@ -42,47 +42,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -91,9 +50,9 @@
           <h1 class="title is-1 publication-title">FPM-INR: Fourier ptychographic microscopy image stack reconstruction using implicit neural representations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a >Haowen Zhou</a><sup>1</sup>,</span>
+              <a >Haowen Zhou *</a><sup>1,*</sup>,</span>
             <span class="author-block">
-              <a href="https://brandonyfeng.github.io">Brandon Y. Feng</a><sup>2</sup>,</span>
+              <a href="https://brandonyfeng.github.io">Brandon Y. Feng</a><sup>2,*</sup>,</span>
             <span class="author-block">
               <a >Haiyun Guo</a><sup>3</sup>,
             </span>
@@ -101,13 +60,13 @@
               <a >Steven (Siyu) Lin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a >Mingshu Liang</a><sup>2</sup>,
+              <a >Mingshu Liang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.cs.umd.edu/~metzler/">Christopher Metzler</a><sup>1,2</sup>,
+              <a href="http://www.cs.umd.edu/~metzler/">Christopher Metzler</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://biophot.caltech.edu/">Changhuei Yang</a><sup>2</sup>
+              <a href="https://biophot.caltech.edu/">Changhuei Yang</a><sup>1</sup>
             </span>
           </div>
 
@@ -115,6 +74,7 @@
             <span class="author-block"><sup>1</sup>California Institute of Technology,</span>
             <span class="author-block"><sup>2</sup>University of Maryland,</span>
             <span class="author-block"><sup>3</sup>Rice University</span>
+            <span class="author-block"><sup>*</sup>These authors contribute equally</span>
           </div>
 
           <div class="column has-text-centered">
@@ -260,11 +220,13 @@
         <div class="content has-text-justified">
           <p>
             Image stacks provide invaluable 3D information in various biological and pathological imaging applications. 
-            Fourier ptychographic microscopy (FPM) enables reconstructing high-resolution, wide field-of-view image stacks without $z$-stack scanning, thus significantly accelerating image acquisition. 
+            Fourier ptychographic microscopy (FPM) enables reconstructing high-resolution, wide field-of-view image stacks without z-stack scanning, thus significantly accelerating image acquisition. 
             However, existing FPM methods take tens of minutes to reconstruct and gigabytes of memory to store a high-resolution volumetric scene, impeding fast gigapixel-scale remote digital pathology.
             While deep learning approaches have been explored to address this challenge, existing methods poorly generalize to novel datasets and can produce unreliable hallucinations.
+            
             This work presents FPM-INR, a compact and efficient framework that integrates physics-based optical models with implicit neural representations (INR) to represent and reconstruct FPM image stacks.
-            FPM-INR is agnostic to system design or sample types and does not require external training data. In our demonstrated experiments, FPM-INR substantially outperforms traditional FPM algorithms with up to a 25-fold increase in speed and an 80-fold reduction in memory usage for continuous image stack representations.
+            FPM-INR is agnostic to system design or sample types and does not require external training data. 
+            In our demonstrated experiments, FPM-INR substantially outperforms traditional FPM algorithms with up to a 25-fold increase in speed and an 80-fold reduction in memory usage for continuous image stack representations.
           </p>
         </div>
       </div>
@@ -452,8 +414,7 @@
         <div class="content">
           
           <p>
-            This page uses the template:
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website.
+            This page uses the template: <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
           </p>
         </div>
       </div>
