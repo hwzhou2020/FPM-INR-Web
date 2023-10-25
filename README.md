@@ -1,5 +1,9 @@
 # FPM-INR
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+Project page for "FPM-INR: Fourier ptychographic microscopy image stack reconstruction using implicit neural representations"
+
+This repository contains source code for the [Nerfies website](https://nerfies.github.io).
+
+
 
 
